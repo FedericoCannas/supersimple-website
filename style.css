@@ -1,0 +1,562 @@
+
+html {
+    font-family: 'Montserrat', sans-serif; /* Establece la fuente utilizada para el texto en el elemento html como 'Montserrat' con una alternativa de fuente sans-serif. */
+    font-family: 'Roboto', sans-serif; /* Establece otra fuente utilizada para el texto en el elemento html como 'Roboto' con una alternativa de fuente sans-serif. */
+}
+
+/* Cuerpo --------------------------------------------------------------------*/
+
+body {
+    justify-content: center;
+    width: auto;
+    height: auto; /* Establece la altura del cuerpo automáticamente para adaptarse al contenido. */
+    margin: auto; /* Establece el margen externo en 0, eliminando cualquier margen predeterminado. */
+    padding: auto; /* Establece el relleno interno en 0, eliminando cualquier relleno predeterminado. */
+}
+
+/* FONDO-BACKGROUND --------------------------------------------------------------------*/
+
+.background {
+    position: fixed; /* Establece la posición del elemento como fija para que se mantenga en su lugar incluso al desplazarse. */
+    top: 0; /* Establece la posición superior del elemento como 0. */
+    left: 0; /* Establece la posición izquierda del elemento como 0. */
+    width: 100%; /* Establece el ancho del elemento al 100% del ancho del contenedor padre. */
+    height: 100%; /* Establece la altura del elemento al 100% de la altura del contenedor padre. */
+    z-index: -1; /* Establece el índice de apilamiento del elemento como -1, para que quede detrás de otros elementos. */
+    background-image: linear-gradient(135deg, #00d7b4, #505488, #2f3f82, #161569, #5a4855, #a950a1, #ff7cae); /* Establece una imagen de fondo con un degradado lineal. */
+    background-size: 500% 500%; /* Establece el tamaño de la imagen de fondo a 500% del tamaño original en ambas dimensiones. */
+    animation: animateBackground 10s infinite; /* Aplica una animación llamada 'animateBackground' al elemento con una duración de 10 segundos y se repite infinitamente. */
+}
+
+
+@keyframes animateBackground {
+    0% {
+        background-position: 0 50%;
+}
+    50% {
+        background-position: 100% 50%;
+}
+    100% {
+        background-position: 0 50%;
+}
+}
+
+/* CONTENEDOR DE LINKS INSTA-LINKEDIN-GITHUB-CONTACTO --------------------------------------------------------------------*/
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+nav {
+    display: flex;
+    margin: 0; /* Establece el margen externo de la lista en 0. */
+    padding: 0; /* Establece el relleno interno de la lista en 0. */
+    justify-content: center; /* Centra horizontalmente los elementos del contenedor de navegación. */
+    align-items: center; /* Centra verticalmente los elementos del contenedor de navegación. */
+    background-color: none; /* Establece el color de fondo del menú como ninguno. */
+}
+
+ul {
+    list-style: none;
+    display: flex; /* Establece la lista como un contenedor flexible. */
+    justify-content: center; /* Centra horizontalmente los elementos de la lista. */
+    align-items: center; /* Centra verticalmente los elementos de la lista. */
+    margin: 0; /* Establece el margen externo de la lista en 0. */
+    padding: 0; /* Establece el relleno interno de la lista en 0. */
+}
+
+ul li {
+    display: flex; /* Establece cada elemento de la lista como un contenedor flexible. */
+    margin: 20px; /* Establece un margen alrededor de cada elemento de la lista. */
+    padding: 20px; /* Establece un relleno dentro de cada elemento de la lista. */
+    list-style: none; /* Elimina los estilos de viñetas de los elementos de la lista. */
+}
+
+ul li:not(:last-child) {
+    margin-right: 10px; /* Establece un margen derecho entre los elementos de la lista, excepto el último elemento. */
+}
+
+nav ul {
+    list-style-type: none; /* Elimina los estilos de viñetas de los elementos de la lista. */
+    padding: 0; /* Establece el relleno interno de la lista en 0. */
+    margin: 0; /* Establece el margen externo de la lista en 0. */
+    display: flex; /* Establece la lista como un contenedor flexible. */
+    justify-content: space-around; /* Distribuye equitativamente los elementos de la lista en el espacio disponible. */
+    width: 100%; /* Establece el ancho de la lista al 100% del ancho del contenedor padre. */
+}
+
+.argenfreakMini {
+    display: flex; /* Establece el contenedor de la imagen como un contenedor flexible. */
+    flex-direction: column; /* Establece la dirección de los elementos en el contenedor como columnas. */
+    justify-content: center; /* Centra verticalmente los elementos del contenedor de la imagen. */
+    align-items: center; /* Centra horizontalmente los elementos del contenedor de la imagen. */
+    height: 300px;
+    width: auto;
+}
+
+.image-container img {
+    width: 100%; /* Establece el ancho de la imagen al 100% del contenedor. */
+    height: 100%; /* Establece la altura de la imagen al 100% del contenedor. */
+    object-fit: cover; /* Escala la imagen para cubrir completamente el contenedor, manteniendo su relación de aspecto. */
+    box-shadow: 1 0 0 transparent; /* Establece la sombra inicial de la imagen como transparente. */
+    transition: box-shadow 0.3s ease; /* Establece una transición suave para la propiedad de la sombra. */
+    animation: floatshadow 2s ease-in-out infinite; /* Aplica una animación llamada 'floatshadow' a la imagen con una duración de 2 segundos y se repite infinitamente. */
+}
+
+#a2-logo {
+    position: absolute; /* Establece la posición del elemento como absoluta en relación con su contenedor padre. */
+    top: 50%; /* Mueve el elemento hacia el 50% de la altura del contenedor padre. */
+    left: 50%; /* Mueve el elemento hacia el 50% del ancho del contenedor padre. */
+    transform: translate(-50%, -50%); /* Desplaza el elemento hacia arriba y hacia la izquierda en un 50% de su propio tamaño, para centrarlo correctamente. */
+    cursor: grab; /* Cambia el cursor a una mano cuando se pasa sobre el elemento, indicando que es posible agarrarlo. */
+    animation: floatLogo 2s ease-in-out infinite; /* Aplica una animación llamada 'floatLogo' al elemento con una duración de 2 segundos y se repite infinitamente. */
+}
+
+/*Animacion carita flotando-------------------------------------------------------------------------*/
+
+@keyframes floatLogo {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#a2-logo {
+    position: relative; /* Establece la posición relativa del elemento */
+    display: inline-block; /* Muestra el elemento como un bloque en línea */
+}
+
+.contenedorTodo {
+    position: relative; /* Establece la posición relativa del elemento */
+    width: 200px; /* Ancho del elemento */
+    height: 200px; /* Altura del elemento */
+    transition: opacity 0.3s ease; /* Transición suave de la opacidad durante 0.3 segundos */
+    height: 300px;
+    width: auto;
+}
+
+#imagen2 {
+    position: absolute; /* Establece la posición absoluta del elemento */
+    top: 0; /* Posiciona el elemento en la parte superior del contenedor padre */
+    left: 0; /* Posiciona el elemento en la parte izquierda del contenedor padre */
+    opacity: 0; /* Establece la opacidad inicial del elemento a 0 (invisible) */
+}
+
+#a2-logo:hover #imagen1 {
+    opacity: 0; /* Al pasar el mouse sobre #a2-logo, establece la opacidad de #imagen1 a 0 (invisible) */
+}
+
+#a2-logo:hover #imagen2 {
+    opacity: 1; /* Al pasar el mouse sobre #a2-logo, establece la opacidad de #imagen2 a 1 (visible) */
+}
+
+.contenedorTodo:hover {
+    transform: scale(1.1); /* Al pasar el mouse sobre .contenedorTodo, aplica una escala del 110% al elemento */
+}
+
+.contenedorTodo {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos dentro del contenedor */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    transition: transform 0.3s ease; /* Establece una transición suave de 0.3 segundos para la propiedad transform */
+    width: auto; /* Ancho automático según el contenido */
+}
+
+.logo {
+    width: 80px; /* Ancho de 80px */
+    height: 80px; /* Altura de 80px */
+    transition: transform 0.3s ease; /* Establece una transición suave de 0.3 segundos para la propiedad transform */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Al pasar el mouse sobre .logo, aplica una escala del 110% al elemento */
+}
+
+.logo-link {
+    position: center; /* Establece la posición central del elemento */
+    pointer-events: auto; /* Habilita los eventos del puntero en el elemento */
+    position: relative; /* Establece la posición relativa del elemento */
+    display: inline-block; /* Muestra el elemento como un bloque en línea */
+}
+
+.logo-link::after {
+    content: attr(data-text); /* Establece el contenido del pseudo-elemento como el valor del atributo "data-text" del elemento */
+    position: absolute; /* Establece la posición absoluta del pseudo-elemento */
+    top: 100%; /* Posiciona el pseudo-elemento en la parte inferior del elemento padre */
+    left: 50%; /* Posiciona el pseudo-elemento en el centro horizontal del elemento padre */
+    transform: translateX(-50%); /* Desplaza el pseudo-elemento hacia la izquierda en un 50% de su propio ancho */
+    padding: 5px; /* Espacio interno del pseudo-elemento */
+    background-color: transparent; /* Color de fondo transparente */
+    color: whitesmoke; /* Color del texto */
+    font-size: 12px; /* Tamaño de fuente */
+    white-space: nowrap; /* Evita el salto de línea del contenido */
+    opacity: 0; /* Opacidad inicial del pseudo-elemento */
+    visibility: hidden; /* Visibilidad inicial del pseudo-elemento */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transición suave para la propiedad de opacidad y visibilidad */
+}
+
+.logo-link:hover::after {
+    opacity: 1; /* Opacidad al pasar el mouse sobre el elemento */
+    visibility: visible; /* Visibilidad al pasar el mouse sobre el elemento */
+}
+
+.logo-link.hidden {
+    pointer-events: none; /* Deshabilita los eventos del puntero en el elemento oculto */
+    user-select: none; /* Evita la selección de elementos ocultos por parte del usuario */
+    visibility: hidden; /* Oculta el elemento */
+}
+
+.logo-container {
+    display: flex; /* Muestra el contenedor como un contenedor flexible */
+    justify-content: center; /* Centra horizontalmente los elementos dentro del contenedor */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+}
+
+.logo-container li {
+    margin-right: 10px; /* Ajusta el margen entre los elementos */
+}
+
+
+.logo-link {
+    margin: 0 10px; /* Establece un margen izquierdo y derecho de 10px */
+    opacity: 0; /* Opacidad inicial del elemento */
+    transition: opacity 0.3s ease; /* Transición suave para la propiedad de opacidad */
+}
+
+.logo-container.show .logo-link {
+    opacity: 1; /* Opacidad cuando el contenedor ".logo-container" tiene la clase ".show" */
+}
+
+.ul {
+    height: 100px; /* Altura de 100px */
+    width: 100; /* Anchura de 100 (falta la unidad, por ejemplo, px) */
+}
+
+
+
+nav ul li {
+    display: inline; /* Muestra los elementos "li" en línea uno al lado del otro */
+}
+
+nav ul li a {
+    text-decoration: none; /* Sin decoración de texto */
+    color: #FFFFFF; /* Color del texto */
+}
+
+h1 {
+    text-align: center; /* Alineación del texto al centro */
+    margin-top: 5px; /* Margen superior de 5px */
+    color: white; /* Color del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+}
+
+/*Imagen HELLO IM FEDERICO CANNAS ---------------------------------------------*/
+.enlarged-image{
+    position: center;
+}
+
+
+#toggleAnimation {
+    position: absolute;
+    top: 20px; /* Ajusta la posición vertical según tus necesidades */
+    right: 20px; /* Ajusta la posición horizontal según tus necesidades */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggleAnimation:hover {
+    background-color: #555;
+}
+
+#toggleAnimation:focus {
+    outline: none;
+}
+
+.container {
+    display: flex;/*Hace que el contenedor se comporte como un contenedor flexible. */
+    flex-direction: column; /* Establece la dirección de flexión en columna */
+    justify-content: center; /* Centra verticalmente los elementos dentro del contenedor */
+    align-items: center; /* Centra horizontalmente los elementos dentro del contenedor */
+}
+
+
+.article {
+    width: 50px;
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.article-container .article {
+    text-align: center;
+}
+
+
+.article:hover {
+    background-color: #f2f2f2;
+}
+
+.graphicDesign-container {
+    padding: 0;
+    margin: 0; /* Establece el margen externo en 0, eliminando cualquier margen predeterminado. */
+    display: -webkit-flex; /* Establece el elemento como un contenedor flexible en navegadores WebKit. */
+    display: -moz-flex; /* Establece el elemento como un contenedor flexible en navegadores Firefox. */
+    display: -ms-flex; /* Establece el elemento como un contenedor flexible en navegadores Internet Explorer. */
+    display: flex; /* Establece el elemento como un contenedor flexible. */
+    -webkit-flex-direction: column; /* Establece la dirección de los elementos internos como columnas en navegadores WebKit. */
+    -moz-flex-direction: column; /* Establece la dirección de los elementos internos como columnas en navegadores Firefox. */
+    -ms-flex-direction: column; /* Establece la dirección de los elementos internos como columnas en navegadores Internet Explorer. */
+    flex-direction: column; /* Establece la dirección de los elementos internos como columnas. */
+    -webkit-justify-content: center; /* Centra verticalmente los elementos internos en navegadores WebKit. */
+    -moz-justify-content: center; /* Centra verticalmente los elementos internos en navegadores Firefox. */
+    -ms-justify-content: center; /* Centra verticalmente los elementos internos en navegadores Internet Explorer. */
+    justify-content: center; /* Centra verticalmente los elementos internos. */
+    -webkit-align-items: center; /* Centra horizontalmente los elementos internos en navegadores WebKit. */
+    -moz-align-items: center; /* Centra horizontalmente los elementos internos en navegadores Firefox. */
+    -ms-align-items: center; /* Centra horizontalmente los elementos internos en navegadores Internet Explorer. */
+    align-items: center; /* Centra horizontalmente los elementos internos. */
+    height: 30vh; /* Establece la altura del contenedor al 100% de la altura de la ventana. */
+}
+
+.graphicDesign {
+    position: relative; /* Establece la posición relativa para el contenedor */
+}
+
+.image1,
+.image2 {
+    margin: 0;
+    position: absolute; /* Establece la posición absoluta para las imágenes */
+    margin-top: 20px; /* Ajusta el espacio entre las imágenes y la imagen principal */
+    animation: slide-in 5s ease-in-out; /* Aplica una animación de entrada/salida a las imágenes */
+}
+
+.graphicDesign-container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.image1,
+.image2 {
+    opacity: 0; /* Establece la opacidad inicial de las imágenes a 0 */
+    transition: opacity 0.5s; /* Establece una transición de opacidad de 0.5 segundos */
+}
+
+.show-image {
+    opacity: 1; /* Cambia la opacidad a 1 para mostrar la imagen */
+}
+
+.graphicDesign-container {
+    display: flex; /* Establece el contenedor de navegación como un contenedor flexible. */
+    justify-content: center; /* Centra horizontalmente los elementos del contenedor de navegación. */
+    align-items: center; /* Centra verticalmente los elementos del contenedor de navegación. */
+    background-color: none; /* Establece el color de fondo del menú como ninguno. */
+}
+
+.graphicDesign-container img {
+    max-width: 100%;
+}
+
+
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center; /* Centrar todos los elementos */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.text-overlay h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-overlay p {
+    font-size: 16px;
+}
+
+footer {
+    display: flex; /* Establece el elemento <footer> como un contenedor flexible */
+    justify-content: center; /* Centra los elementos horizontalmente dentro del <footer> */
+    align-items: center; /* Centra los elementos verticalmente dentro del <footer> */
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente dentro del <footer> */
+    height: auto; /* Ajusta la altura automáticamente según el contenido del <footer> */
+    background-color: #364552; /* Establece el color de fondo del <footer> */
+    padding: 1rem; /* Establece un espacio de relleno de 1rem alrededor del contenido del <footer> */
+}
+
+footer a:hover{
+color: cornflowerblue;
+}
+
+.datosFooter{
+    text-align: center;
+}
+
+.marca{
+    color: whitesmoke;
+}
+
+a {
+    transition: color 0.3s ease;
+    color: white;
+    margin-right: 20px; /* Añade margen derecho entre los enlaces */
+    margin-bottom: 20px; /* Añade margen inferior entre los enlaces */
+    display: inline-block; /* Convierte los enlaces en elementos de bloque */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* animacion de los textos graphic,illust,programm ---------------------------*/
+
+.graphicDesign-container {
+    position: relative;
+}
+
+.image2 {
+    transition: transform 0.1s ease;
+}
+
+.image1:hover,
+.image2:hover {
+    filter: brightness(120%);
+    transform: scale(1.05);
+}
+
+.estas-interesado{
+    background-color: rgb(35, 35, 35);
+    position: relative;
+    color: #dbdbdb;
+    font-size:x-large;
+    text-align: center;
+}
+
+/*SECCION MANDAME UN MENSAJE -------------------------------------------------*/
+.container-form {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 40vh;
+    background-color: rgba(242, 242, 242, 0.5); /* Establece un color de fondo con opacidad */
+    padding: 4rem;
+}
+
+.textoContainer1 {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+}
+
+.textoContacto{
+    margin-bottom: 2px; /* Espacio entre los textos */
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+    font-size:xx-large;
+}
+
+.textoContacto1{
+    margin-bottom: 10px; /* Espacio entre los textos */
+    position: relative;
+    color: #333;
+    font-size:x-large;
+}
+
+.container-form form {
+    display: flex;
+    flex-direction: column;
+    align-items:normal;
+}
+
+.container-form form label {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.container-form form input,
+.container-form form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.container-form form button {
+    margin: 2px;
+    padding: 0.5rem 1rem;
+    background-color: #428bca;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.container-form form button:hover {
+    background-color: #a9307b;
+}
+
+.floating-kitten {
+  bottom: 20px; /* Ajusta la posición verticalmente */
+  right: 20px; /* Ajusta la posición horizontalmente */
+  width: 100px; /* Ajusta el ancho de la imagen */
+  height: auto; /* Ajusta la altura proporcionalmente */
+  z-index: 9999; /* Asegura que la imagen esté por encima de otros elementos */
+  animation: floating 3s ease-in-out infinite; /* Aplica la animación */
+}
+
+@keyframes floating {
+0% {
+    transform: translate(0, 0);
+}
+50% {
+    transform: translate(0, -10px);
+}
+100% {
+    transform: translate(0, 0);
+}
+}
+
+
+

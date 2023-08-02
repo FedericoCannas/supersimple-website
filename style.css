@@ -8,7 +8,7 @@ html {
 
 body {
     justify-content: center;
-    width: auto;
+    width: fit-content;
     height: auto; /* Establece la altura del cuerpo automáticamente para adaptarse al contenido. */
     margin: auto; /* Establece el margen externo en 0, eliminando cualquier margen predeterminado. */
     padding: auto; /* Establece el relleno interno en 0, eliminando cualquier relleno predeterminado. */
@@ -474,7 +474,6 @@ html {
     display: flex;
     justify-content:center;
     align-items: center;
-    height: 40vh;
     background-color: rgba(242, 242, 242, 0.5); /* Establece un color de fondo con opacidad */
     padding: 4rem;
 }
@@ -557,6 +556,3 @@ html {
     transform: translate(0, 0);
 }
 }
-
-
-
